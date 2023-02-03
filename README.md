@@ -13,7 +13,7 @@ This python program processes a csv data file by extracting and validating infor
 Execute the following command:
 > python Homework1_nag180001.py *path.csv*
 
-Homework1_nag180001.py can be found [here]()
+Homework1_nag180001.py can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/03f8d9fa7e4305c78397c615cd8d086383db9301/Homework1/Homework1_nag180001.py).
 
 ### Takeaway
 Python is easy to use for text procesing. 
