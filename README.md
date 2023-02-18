@@ -23,3 +23,12 @@ However, the lack of built-in support for typing makes validating input more dif
 This assignment was a good refresher on python.
 I had previously worked with python in other classes, such as AI and Software Engineering, but I do not frequently work with it outside of an academic setting.
 Consequently, I knew the concepts for parsing strings and regex - pickle was new to me but not as involved.
+
+## Homework 2 - Word Guess Game
+This python program is a word guessing game that utilizes NLTK features to process text for the game.
+
+### To run
+Execute the following command:
+> python Homework2_nag180001.py *path.txt*
+
+Homework2_nag180001.py can be found [here]().
