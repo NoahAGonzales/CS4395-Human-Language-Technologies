@@ -36,5 +36,5 @@ Homework2_nag180001.py can be found [here](https://github.com/NoahAGonzales/CS43
 
 ## Homework 3 - Wordnet
 This is a notebook containing some play with WordNet.
-The notebook can be found [here]()
+The notebook can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/129340376f09cbc09028c70dad6e6191b16bf686/Homework3/HLT3_nag180001.ipynb)
 
