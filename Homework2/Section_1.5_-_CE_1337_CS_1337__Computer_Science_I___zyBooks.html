@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/5 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <title>Section 1.5 - CE 1337/CS 1337: Computer Science I | zyBooks</title>
+        <meta content="" name="description">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href="https://learn.zybooks.com/assets/favicon.ico" integrity="" rel="icon">
+
+        
+<meta name="zybooks-web/config/environment" content="%7B%22environment%22%3A%22production%22%2C%22locationType%22%3A%22auto%22%2C%22modulePrefix%22%3A%22zybooks-web%22%2C%22rootURL%22%3A%22%2F%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%2C%22EXTEND_PROTOTYPES%22%3Atrue%7D%2C%22APP%22%3A%7B%22ACCESS_DEV%22%3Afalse%2C%22ADMIN_URL%22%3A%22https%3A%2F%2Fadmin.zybooks.com%2F%22%2C%22ANALYTICS_URL%22%3A%22https%3A%2F%2Fanalytics.zybooks.com%2F%22%2C%22API_HOST%22%3A%22https%3A%2F%2Fzyserver.zybooks.com%2Fv1%2F%22%2C%22APP_URL%22%3A%22https%3A%2F%2Flearn.zybooks.com%2F%22%2C%22AUTHORS_ONLY%22%3Afalse%2C%22BUILDKEY%22%3A%22cf115fca-809c-390c-6168-56ba257dee5d%22%2C%22CLOUDSEARCH_ENDPOINT%22%3A%22https%3A%2F%2Foqsgv0xbv7.execute-api.us-west-2.amazonaws.com%2Fproduction%22%2C%22CODINGROOMS_URL%22%3A%22https%3A%2F%2Fapp.codingrooms.com%22%2C%22DISABLE_EVENTS%22%3Afalse%2C%22EVENTS_API_HOST%22%3A%22https%3A%2F%2Fzyevents.zybooks.com%2F%22%2C%22EVENTS_API_TARGET%22%3A%22v1%2Fstream%22%2C%22ROUTE_IF_ALREADY_AUTHENTICATED%22%3A%22library%22%2C%22SALES_URL%22%3A%22https%3A%2F%2Fsales.zybooks.com%2F%22%2C%22SESSION_KEY_SUFFIX%22%3A%225%22%2C%22TERMINAL_SOCKET_URL%22%3A%22wss%3A%2F%2Fzyterminal.zybooks.com%2Fws%22%2C%22WEBINAR_URL%22%3A%22https%3A%2F%2Fzoom.us%2Fwebinar%2Fregister%2FWN_vuUaO8C6QLy_yzxW4ixU3Q%22%2C%22WHAT_IS_ZYBOOK_VIDEO_URL%22%3A%22https%3A%2F%2Fvimeo.com%2F285133146%2F48bc90afb5%22%2C%22ZYBOOKS_URL%22%3A%22https%3A%2F%2Flearn.zybooks.com%2F%22%2C%22ZYSERVER2_API_HOST%22%3A%22https%3A%2F%2Fzyserver2.zybooks.com%2Fv1%2F%22%2C%22ITLABS_API_HOST%22%3A%22https%3A%2F%2Fitlabs-server.zybooks.com%2Fv1%2F%22%2C%22ZYSERVER2_DR_API_HOST%22%3A%22https%3A%2F%2Fzyserver2.dr.zybooks.com%2Fv1%2F%22%2C%22ZYEXAM_SERVER_API_HOST%22%3A%22https%3A%2F%2Fzyexam-server.zybooks.com%2Fv1%2F%22%2C%22JUPYTERHUB_HOST%22%3A%22https%3A%2F%2Fjupyterhub.zybooks.com%2F%22%7D%2C%22contentSecurityPolicy%22%3A%7B%22connect-src%22%3A%22&#39;self&#39;%20www.google-analytics.com%20https%3A%2F%2Ffonts.googleapis.com%20https%3A%2F%2F*.stripe.com%20https%3A%2F%2Fmaps.googleapis.com%20https%3A%2F%2F*.nr-data.net%20https%3A%2F%2Fzyserver.zybooks.com%2Fv1%2F%22%2C%22default-src%22%3A%22&#39;none&#39;%22%2C%22font-src%22%3A%22&#39;self&#39;%20fonts.gstatic.com%20%22%2C%22frame-src%22%3A%22&#39;self&#39;%20https%3A%2F%2F*.stripe.com%22%2C%22img-src%22%3A%22&#39;self&#39;%20https%3A%2F%2F*.stripe.com%20https%3A%2F%2F*.nr-data.net%20http%3A%2F%2Fupload.wikimedia.org.com%2F%22%2C%22media-src%22%3A%22&#39;self&#39;%22%2C%22script-src%22%3A%22&#39;self&#39;%20&#39;unsafe-inline&#39;%20&#39;unsafe-eval&#39;%20www.google-analytics.com%20https%3A%2F%2F*.stripe.com%20https%3A%2F%2Fmaps.googleapis.com%20https%3A%2F%2F*.newrelic.com%20https%3A%2F%2F*.nr-data.net%22%2C%22style-src%22%3A%22&#39;self&#39;%20&#39;unsafe-inline&#39;%20https%3A%2F%2Ffonts.googleapis.com%22%2C%22frame-ancestors%22%3A%22*%22%7D%2C%22metricsAdapters%22%3A%5B%7B%22name%22%3A%22GoogleAnalytics%22%2C%22environments%22%3A%5B%22development%22%2C%22staging%22%2C%22production%22%5D%2C%22config%22%3A%7B%22id%22%3A%22UA-43181201-3%22%2C%22debug%22%3Afalse%2C%22trace%22%3Afalse%2C%22sendHitTask%22%3Atrue%2C%22require%22%3A%5B%22ecommerce%22%5D%7D%7D%5D%2C%22moment%22%3A%7B%22includeTimezone%22%3A%22subset%22%7D%2C%22stripe%22%3A%7B%22lazyLoad%22%3Atrue%2C%22publishableKey%22%3A%22pk_live_6WfpM1NZl9sSnKivV9WvGD2H%22%7D%2C%22ember-froala-editor%22%3A%7B%22key%22%3A%22mPD4tD2F2B2D1H1A1D3lFa1f1PVWEd2Fa1XHTHh1THMMb1NCg1tA2B2C2E2C5F1A1F1I4C10%3D%3D%22%7D%2C%22newRelic%22%3A%7B%22agent%22%3A%22js-agent.newrelic.com%2Fnr-1216.min.js%22%2C%22applicationId%22%3A%22772289686%22%2C%22licenseKey%22%3A%2245d36ecda8%22%2C%22spaMonitoring%22%3Afalse%2C%22beacon%22%3A%22bam.nr-data.net%22%2C%22errorBeacon%22%3A%22bam.nr-data.net%22%7D%2C%22ember-websockets%22%3A%7B%22socketIO%22%3Afalse%7D%2C%22resourceHost%22%3A%22https%3A%2F%2Fzytools.zybooks.com%2FzyBooks2%2F%22%2C%22staticResourceHost%22%3A%22https%3A%2F%2Fstatic-resources.zybooks.com%2F%22%2C%22imageHost%22%3A%22https%3A%2F%2Fzytools.zybooks.com%2FzyAuthor%2F%22%2C%22zydeHost%22%3A%22http%3A%2F%2Fzyde2.zyante.com%22%2C%22terminalSocketUrl%22%3A%22wss%3A%2F%2Fzyterminal.dev.kube.zybooks.com%2Fws%22%7D">
+
+        <link href="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/vendor-7b00940695ee7b0970e08e1b39908b00.css" integrity="" rel="stylesheet">
+<link rel="stylesheet" href="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/chunk.255.6515347f9aafde315cb9.css" integrity="sha256-wRavIaoPrNdpNEmuJGgfqbo8pwu++ycAUNQMCCjwn4s= sha512-sHeUXOHKhOY9n1wMvoYNDnQLRKoYNmDYK33GlCzmkgAP6GM4j6lNNB6znMqI4JXSGsVOMob9XdpNQzEHemzQhA==">
+        <link href="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/zybooks-web-097871713c47469e8a00ce08677cfcd1.css" integrity="" rel="stylesheet">
+        <link crossorigin="anonymous" href="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/css" integrity="" rel="stylesheet">
+        <link href="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/css(1)" integrity="" rel="stylesheet">
+        <link href="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/basicLightbox.min-69bdb9cd40a5bbcb4587424b1c70f89b.css" integrity="" rel="stylesheet">
+
+        <script type="text/javascript" async="" src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/ecommerce.js"></script><script async="" src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/analytics.js"></script><script type="text/javascript" src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/45d36ecda8"></script><script src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/nr-1216.min.js"></script><script integrity="" src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/vendor-86c75b0b9ff66a7b29613b0691402394.js"></script><style type="text/css" id="operaUserStyle"></style>
+<script src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/chunk.255.6515347f9aafde315cb9.js" integrity="sha256-iLIQejwfLjzMCG+9MFM1aZGi0ElCmmvNtSfUXFx+dUk= sha512-ezMgvAGq1XrBlvn2A7GyIfOCxwrFA8oZmgt0QNdm3WlmvGTIrnixu+MmK5zh9T48Ao/ReQlVGIH0lMydjff8yA=="></script>
+<script src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/chunk.143.3751b6aee2e598047141.js" integrity="sha256-3Ti9RvdjuTSLwJH7ShWV7ezIE3hMCdZtUM6WxlPGV70= sha512-ESl4wFVHPi/dClW01cH7XVbijxLYatJ1IE7hlkfAgNed24b94G4AXDPHF8GWT9eRvUcNWbXx63NYEYFTuOQWkA=="></script>
+        <script integrity="" src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/zybooks-web-27f9d11a6cf02403a3521aad0149ace2.js"></script>
+        <script integrity="" src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/ace.js"></script>
+        <script integrity="" src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/string-diff-e0bbca1822d01af91ebb85faf6848c6b.js"></script>
+
+        
+    <style type="text/css">:root zeus-ad, :root topadblock, :root span[id^="ezoic-pub-ad-placeholder-"], :root guj-ad, :root gpt-ad, :root div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"], :root div[id^="zergnet-widget"], :root div[id^="yandex_ad"], :root div[id^="vuukle-ad-"], :root div[id^="sticky_ad_"], :root div[id^="rc-widget-"], :root div[id^="lazyad-"], :root div[id^="gpt_ad_"], :root div[id^="ezoic-pub-ad-"], :root div[id^="div-gpt-"], :root div[id^="dfp-ad-"], :root div[id^="adspot-"], :root div[id^="ads300_250-widget-"], :root div[id^="ads300_100-widget-"], :root div[id^="ads250_250-widget-"], :root div[id^="adrotate_widgets-"], :root div[id^="adngin-"], :root div[id^="_vdo_ads_player_ai_"], :root div[id*="ScriptRoot"], :root div[id*="MarketGid"], :root div[data-native_ad], :root div[data-mpu1], :root div[data-insertion], :root div[data-id-advertdfpconf], :root div[data-google-query-id], :root hl-adsense, :root div[data-contentexchange-widget], :root div[data-content="Advertisement"], :root div[data-alias="300x250 Ad 2"], :root div[data-alias="300x250 Ad 1"], :root div[data-adzone], :root div[data-adunit-path], :root div[data-ad-wrapper], :root div[data-ad-targeting], :root div[data-ad-placeholder], :root div[class^="native-ad-"], :root div[data-dfp-id], :root div[class^="kiwi-ad-wrapper"], :root div[class^="Adstyled__AdWrapper-"], :root div[aria-label="Ads"], :root display-ads, :root display-ad-component, :root aside[id^="adrotate_widgets-"], :root article.ad, :root ark-top-ad, :root app-advertisement, :root amp-fx-flying-carpet, :root amp-embed[type="taboola"], :root amp-connatix-player, :root amp-ad-custom, :root ad-shield-ads, :root ad-desktop-sidebar, :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[href^="https://yogacomplyfuel.com/"], :root a[href^="https://t.aslnk.link/"], :root [href^="https://zstacklife.com/"] img, :root a[href^="https://www.sweetdeals.com"], :root div[class^="Display_displayAd"], :root a[href^="https://www.bang.com/?aff="], :root a[href^="https://www.sheetmusicplus.com/?aff_id="], :root a[href^="https://bngpt.com/"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href^="https://www.mypornstarcams.com/landing/click/"], :root a[href^="https://financeads.net/tc.php?"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://www.kingsoffetish.com/tour?partner_id="], :root a[href^="https://www.infowarsstore.com/"] > img, :root a[href^="https://t.grtyi.com/"], :root a[href^="https://www.highperformancecpmgate.com/"], :root a[href^="https://www.highcpmrevenuenetwork.com/"], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="https://www.financeads.net/tc.php?"], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root [data-template-type="nativead"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://webroutetrk.com/"], :root a[href^="https://wantopticalfreelance.com/"], :root a[href^="https://twinrdsyn.com/"], :root a[href^="https://tsartech.g2afse.com/"], :root a[href^="https://tragency-clesburg.icu/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.afcpatrk.com/"], :root a[href^="https://track.adform.net/"], :root a[href^="https://torguard.net/aff.php"] > img, :root [data-role="tile-ads-module"], :root a[href^="https://adsrv4k.com/"], :root a[href^="https://go.xlviirdr.com"], :root a[href^="https://thaudray.com/"], :root a[href^="https://taghaugh.com/"], :root a[href^="https://t.adating.link/"], :root a[href^="https://go.trackitalltheway.com/"], :root [href^="https://track.fiverr.com/visit/"] > img, :root a[href^="https://syndication.exoclick.com/"], :root a[href^="https://syndication.dynsrvtbg.com/"], :root a[href^="https://streamate.com/landing/click/"], :root a[href^="https://ad.doubleclick.net/"], :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="https://refpazkjixes.top/"], :root a[href^="https://go.strpjmp.com/"], :root a[href^="https://refpa4903566.top/"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="https://serve.awmdelivery.com/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root [href^="https://r.kraken.com/"], :root a[href^="https://mmwebhandler.aff-online.com/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root iframe[id^="google_ads_frame"], :root a[href^="https://pb-track.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root div[id^="ad_position_"], :root a[href^="https://ovb.im/"], :root div[id^="ad-div-"], :root a[href^="https://newbinotracs.com/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root [href^="https://stvkr.com/"], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root [href^="https://www.herbanomic.com/"] > img, :root a[href^="https://maymooth-stopic.com/"], :root a[href^="https://loboclick.com"], :root [href^="https://routewebtk.com/"], :root a[href^="https://see.kmisln.com/"], :root a[href^="https://a.bestcontentweb.top/"], :root a[href^="https://lobimax.com/"], :root a[href^="https://lead1.pl/"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://ads.leovegas.com/redirect.aspx?"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://itubego.com/video-downloader/?affid="], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root a[href^="https://incisivetrk.cvtr.io/click?"], :root a[href^="https://iactrivago.ampxdirect.com/"], :root a[href^="https://clk.wrenchsound.store/"], :root a[href^="https://go.zybrdr.com"], :root [href^="http://join.michelle-austin.com/"], :root a[href^="https://go.xxxiijmp.com"], :root a[href^="https://go.xtbaffiliates.com/"], :root a[href^="https://ismlks.com/"], :root [href^="https://www.mypillow.com/"] > img, :root a[href^="https://azpresearch.club/"], :root a[href^="https://go.xlirdr.com"], :root [data-css-class="dfp-inarticle"], :root .card-captioned.crd > .crd--cnt > .s2nPlayer, :root a[href^="https://go.tmrjmp.com"], :root a[href^="https://go.skinstrip.net"][href*="?campaignId="], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="//lambingsyddir.com/"], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://go.goaserv.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://go.ebrokerserve.com/"], :root a[href^="https://go.dmzjmp.com"], :root a[href^="https://go.admjmp.com/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root [href^="https://kingered-banctours.com/"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a[href^="https://affiliate.rusvpn.com/click.php?"], :root a[href^="https://geniusdexchange.com/"], :root a[href^="https://go.gldrdr.com/"], :root [id^="ad_sky"], :root a[href^="https://funkydaters.com/"], :root a[href^="https://frameworkdeserve.com/"], :root a[href^="https://flirtandsweets.life/"], :root a[href^="https://www.mrskin.com/account/"], :root bottomadblock, :root a[href^="https://fertilitycommand.com/"], :root div[data-native-ad], :root AD-SLOT, :root a[href^="https://engine.trackingdesks.com/"], :root [href^="https://totlnkcl.com/"], :root a[href^="https://www.adskeeper.com"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root [href^="https://www.reimageplus.com/"], :root a[href^="https://engine.phn.doublepimp.com/"], :root a[href^="https://engine.blueistheneworanges.com/"], :root a[href^="https://clixtrac.com/"], :root div.fadeInDown[id$="____equal"][class$="____equal"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="https://click.linksynergy.com/fs-bin/"], :root AD-TRIPLE-BOX, :root a[href^="https://click.hoolig.app/"], :root a[href^="https://track.totalav.com/"], :root img[src^="https://images.purevpnaffiliates.com"], :root a[href^="https://porntubemate.com/"], :root a[href^="http://www.gfrevenge.com/landing/"], :root a[href^="https://clickadilla.com/"], :root a[href^="https://click.dtiserv2.com/"], :root a[href^="https://go.xlvirdr.com"], :root a[href^="https://claring-loccelkin.com/"], :root [class^="s2nPlayer"], :root a[href^="https://chaturbate.jjgirls.com/?track="], :root a[href^="https://www.nudeidols.com/cams/"], :root a[href^="https://chaturbate.com/in/?track="], :root a[href^="https://www.onlineusershielder.com/"], :root a[href^="https://chaturbate.com/in/?tour="], :root a[href^="https://cams.imagetwist.com/in/?track="], :root a[href^="https://camfapr.com/landing/click/"], :root a[href^="https://cam4com.go2cloud.org/"], :root a[href^="https://affcpatrk.com/"], :root a[href^="https://bongacams2.com/track?"], :root a[href^="https://bluedelivery.pro/"], :root #topstuff > #tads, :root a[href^="https://black77854.com/"], :root a[href^="https://burpee.xyz/"], :root a[href^="https://ndt5.net/"], :root a[href^="https://batheunits.com/"], :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root a[href^="https://banners.livepartners.com/"], :root a[href^="https://adultfriendfinder.com/go/page/landing"], :root a[href^="https://www.sugarinstant.com/?partner_id="], :root a[href^="https://m.do.co/c/"] > img, :root [href="https://masstortfinancing.com"] img, :root a[href^="https://bongacams10.com/track?"], :root a[href^="https://albionsoftwares.com/"], :root a[href^="https://t.hrtye.com/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://join.sexworld3d.com/track/"], :root a[href^="https://intenseaffiliates.com/redirect/"], :root a[href^="https://aweptjmp.com/"], :root a[href^="https://ads.ad4game.com/"], :root [id^="google_ads_iframe"], :root a[href^="https://syndication.optimizesrv.com/"], :root a[href^="https://affpa.top/"], :root a[href^="https://adnetwrk.com/"], :root a[href^="https://adjoincomprise.com/"], :root [href^="http://misslinkvocation.com/"], :root a[href^="https://adclick.g.doubleclick.net/"], :root a[href^="https://go.nordvpn.net/aff"] > img, :root a[href^="https://misspkl.com/"], :root [href^="http://clicks.totemcash.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root a[href^="https://adswick.com/"], :root a[href^="//go.xlviiirdr.com"], :root a[href^="https://a.bestcontentoperation.top/"], :root [data-m-ad-id], :root a[href^="https://a-ads.com/"], :root [href="https://ourgoldguy.com/contact/"] img, :root a[href^="https://brightadnetwork.com/"], :root [href^="https://www.avantlink.com/click.php"] img, :root iframe[src^="https://pagead2.googlesyndication.com/"], :root a[href^="http://www.onwebcam.com/random?t_link="], :root a[href^="https://agacelebir.com/"], :root a[href^="https://spygasm.com/track?"], :root a[href^="http://d2.zedo.com/"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="https://ad.kubiccomps.icu/"], :root a[href^="http://trk.globwo.online/"], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href^="http://traffic.tc-clicks.com/"], :root a[href^="http://tour.mrskin.com/"], :root a[href^="https://join.virtualtaboo.com/track/"], :root a[href^="http://https://www.get-express-vpn.com/offer/"], :root a[href^="https://cagothie.net/"], :root div[id^="google_dfp_"], :root a[href^="http://googleads.g.doubleclick.net/pcs/click"], :root a[href^="http://go.xtbaffiliates.com/"], :root a[href^="https://awentw.com/"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root a[href^="http://www.mrskin.com/tour"], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href^="http://deloplen.com/"], :root .rc-cta[data-target], :root [href^="http://go.cm-trk2.com/"], :root a[href^="http://adtrack1.club/"], :root a[href^="http://click.payserve.com/"], :root .trc_rbox_border_elm .syndicatedItem, :root a[href^="http://www.onclickmega.com/jump/next.php?"], :root a[href^="http://adf.ly/?id="], :root [href^="http://homemoviestube.com/"], :root a[href^="http://ad.doubleclick.net/"], :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > .vci, :root a[href^="//syndication.dynsrvtbg.com/"], :root a[href^="https://a2.adform.net/"], :root a[href^="http://static.fleshlight.com/images/banners/"], :root a[href^="https://a.adtng.com/"], :root a[href^="//pubads.g.doubleclick.net/"], :root div[data-adname], :root a[href^="https://thechleads.pro/"], :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="], :root a[href^="https://tour.mrskin.com/"], :root DFP-AD, :root a[href^="http://allaptair.club/"], :root a[href^="//go.eabids.com/"], :root [data-d-ad-id], :root a[href*=".engine.adglare.net/"], :root [data-dynamic-ads], :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root [data-ad-width], :root [href^="https://join.playboyplus.com/track/"], :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root a[href^="https://axdsz.pro/"], :root a[href^="http://bodelen.com/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root [href^="https://cpa.10kfreesilver.com/"], :root a[href^="https://a.bestcontentfood.top/"], :root a[href^="https://reinstandpointdumbest.com/"], :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root [href^="https://goldforyourfuture.com/clk.trk"] img, :root a[href^="http://wct.link/"], :root [href^="https://infinitytrk.com/"], :root [onclick^="location.href='http://www.reimageplus.com"], :root [id^="section-ad-banner"], :root .commercial-unit-mobile-top > div[data-pla="1"], :root [id^="chp_ads_block"], :root a[href^="https://go.julrdr.com/"], :root .trc_rbox_div .syndicatedItemUB, :root [href^="https://zone.gotrackier.com/"], :root [href^="https://www.targetingpartner.com/"], :root [href^="https://detachedbates.com/"], :root a[href^="https://fourwhenstatistics.com/"], :root [href^="https://www.restoro.com/"], :root div[id^="ad-position-"], :root a[href^="http://adultfriendfinder.com/go/page/landing"], :root a[href^="http://affiliate.glbtracker.com/"], :root a[href^="https://leg.xyz/?track="], :root a[href^="http://bc.vc/?r="], :root [href^="https://www.brighteonstore.com/products/"] img, :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href*=".trust.zone"], :root [href^="https://shrugartisticelder.com"], :root div[id^="crt-"][style], :root a[href^="http://adultgames.xxx/"], :root a[href^="https://traffic.bannerator.com/"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root [href^="https://www.mypatriotsupply.com/"] > img, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root [href^="https://secure.bmtmicro.com/servlets/"], :root a[href^="https://losingoldfry.com/"], :root .scroll-fixable.rail-right > .deals-rail, :root a[href^="https://oackoubs.com/"], :root a[href^="https://awptjmp.com/"], :root a[href^="https://go.goasrv.com/"], :root .commercial-unit-mobile-top > .v7hl4d, :root [href^="http://mypillow.com/"] > img, :root a[href^="http://bongacams.com/track?"], :root a[href^="https://fleshlight.sjv.io/"], :root [data-ad-manager-id], :root a[href^="https://promo-bc.com/"], :root a[href^="https://clicks.pipaffiliates.com/"], :root [href^="https://noqreport.com/"] > img, :root a[href^="https://go.hpyjmp.com"], :root ADS-RIGHT, :root [href^="https://mystore.com/"] > img, :root [href^="https://mypatriotsupply.com/"] > img, :root [href^="https://mylead.global/stl/"] > img, :root #leader-companion > a[href], :root a[href^="https://transfer.xe.com/signup/track/redirect?"], :root .vid-present > .van_vid_carousel__padding, :root app-ad, :root a[href^="https://go.xxxijmp.com"], :root [href^="https://istlnkcl.com/"], :root [href^="https://www.hostg.xyz/"] > img, :root .section-subheader > .section-hotel-prices-header, :root [href^="https://go.affiliatexe.com/"], :root [href^="https://go.4rabettraff.com/"], :root [href^="https://glersakr.com/"], :root a[href^="https://1startfiledownload1.com/"], :root a[href^="https://wittered-mainging.com/"], :root [href^="https://engine.gettopple.com/"], :root [href^="https://awbbjmp.com/"], :root a[href^="https://k2s.cc/pr/"], :root [href^="https://affect3dnetwork.com/track/"], :root a[href^="https://go.currency.com/"], :root [href^="http://www.mypillow.com/"] > img, :root [href^="https://v.investologic.co.uk/"], :root [href^="https://cipledecline.buzz/"], :root [href^="http://join.trannies-fuck.com/"], :root [href^="http://www.fleshlightgirls.com/"], :root div[id^="div-ads-"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root div[data-role="sidebarAd"], :root [href^="https://join3.bannedsextapes.com"], :root div[data-spotim-slot], :root [href^="https://antiagingbed.com/discount/"] > img, :root a[href^="https://go.247traffic.com/"], :root [href^="https://join.girlsoutwest.com/"], :root [href^="http://trafficare.net/"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="https://adserver.adreactor.com/"], :root [href^="http://join.shemalesfromhell.com/"], :root [id^="ad_slider"], :root a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"], :root [href^="http://join.shemale.xxx/"], :root [href^="https://ilovemyfreedoms.com/landing-"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root .trc_rbox .syndicatedItem, :root a[href^="http://cam4com.go2cloud.org/aff_c?"], :root a[href^="https://cpmspace.com/"], :root [href^="https://freecourseweb.com/"] > .sitefriend, :root [class^="chp_ads_block"], :root a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"], :root [href^="http://join.rodneymoore.com/"], :root [href^="https://go.xlrdr.com"], :root [name^="google_ads_iframe"], :root a[href^="https://porngames.adult/?SID="], :root a[href^="https://landing1.brazzersnetwork.com"], :root #slashboxes > .deals-rail, :root [href^="http://globsads.com/"], :root [href^="https://safer-redirection.com"], :root [href^="https://optimizedelite.com/"] > img, :root [data-name="adaptiveConstructorAd"], :root [href^="//ngeoziadiyc4hi2e.com/"], :root a[href^="https://go.xxxjmp.com"], :root [data-desktop-ad-id], :root [href^="https://wct.link/"], :root [href^="https://traffserve.com/"], :root #kt_player > a[target="_blank"], :root [href="https://www.masstortfinancing.com/"] > img, :root .ob_container .item-container-obpd, :root [id^="div-gpt-ad"], :root [href^="https://mypillow.com/"] > img, :root [href^="https://ad.admitad.com/"], :root a[href^="https://u.expresstech.io/"], :root [href="https://jdrucker.com/gold"] > img, :root a[href^="https://www.iyalc.com/"], :root a[href^="https://track.ultravpn.com/"], :root [href^="https://goldcometals.com/clk.trk"], :root [data-mobile-ad-id], :root a[href^="http://tc.tradetracker.net/"] > img, :root a[href^="https://www.geekbuying.com/dynamic-ads/"], :root a[href^="http://affiliates.thrixxx.com/"], :root #searchResultsList > div > div[onclick$="'inline.ad'});"], :root a[href^="https://go.xlivrdr.com"], :root [data-freestar-ad], :root [data-ad-cls], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root [id^="ad-wrap-"], :root div[id^="taboola-stream-"], :root [href^="https://go.astutelinks.com/"], :root [onclick*="content.ad/"], :root [href^="http://residenceseeingstanding.com/"], :root div[data-adunit], :root app-large-ad, :root [href^="https://turtlebids.irauctions.com/"] img, :root [class^="amp-ad-"], :root [data-ez-name], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root [href^="https://click2cvs.com/"], :root .trc_related_container div[data-item-syndicated="true"], :root [data-revive-zoneid], :root a[href^="https://googleads.g.doubleclick.net/pcs/click"], :root AMP-AD, :root [href^="http://join.shemalepornstar.com/"], :root a[href^="https://go.xlviiirdr.com"], :root .trc_rbox_div .syndicatedItem, :root a-ad, :root [data-ad-module], :root .grid > .container > #aside-promotion, :root a[href^="https://go.cmtaffiliates.com/"], :root [href^="https://trackfin.asia/"], :root .plistaList > .plista_widget_underArticle_item[data-type="pet"], :root a[href*="//lkstrck2.com/"], :root .plistaList > .itemLinkPET, :root atf-ad-slot, :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > div > .vci, :root a[href^="http://partners.etoro.com/"], :root [data-advadstrackid], :root [href^="https://affiliate.fastcomet.com/"] > img, :root #atvcap + #tvcap > .mnr-c > .commercial-unit-mobile-top, :root a[href^="https://traffdaq.com/"], :root a[href^="https://tm-offers.gamingadult.com/"], :root [class^="div-gpt-ad"], :root a[href^="https://bs.serving-sys.com"], :root a[href^="https://join.virtuallust3d.com/"], :root #taw > .med + div > #tvcap > .mnr-c:not(.qs-ic) > .commercial-unit-mobile-top, :root [data-adblockkey], :root [href^="https://www.cloudways.com/en/?id"] { display: none !important; }</style><script src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/tex-mml-svg.js"></script><script src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/lazy.js" charset="UTF-8"></script><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-SVG-styles">
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+</style></head>
+    <body class="do-not-process-mathjax-2 ember-application">
+        
+
+        
+
+        <div id="ember-basic-dropdown-wormhole"></div>
+
+        <script integrity="" src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/script.js"></script><iframe src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/frame.html" title="zyBooks Status" aria-hidden="true" style="position: fixed; border: none; box-shadow: rgba(9, 20, 66, 0.25) 0px 20px 32px -8px; z-index: 9999; transition: left 1s ease 0s, bottom 1s ease 0s, right 1s ease 0s; height: 115px; width: 320px; left: -9999px; right: -9999px; bottom: calc(100% - 175px);"></iframe>
+    
+
+
+
+<header class="top-toolbar " role="none">
+    <div class="left-buttons">
+        <div class="zb-breadcrumbs ">
+        <button aria-disabled="false" aria-label="Menu" class="zb-button  grey    icon-button left        menu-button" aria-expanded="false" type="button">
+            <i class="zb-icon material-icons med grey  " role="img" aria-label="menu" aria-hidden="false">
+            menu
+<!----></i>
+
+<!----><!----></button>
+
+
+        <div class="logo">
+                <a id="ember4" class="ember-view" href="https://learn.zybooks.com/"><img alt="zyBooks" height="22px" src="./Section 1.5 - CE 1337_CS 1337_ Computer Science I _ zyBooks_files/logo.svg" width="83px"></a>
+        </div>
+
+            <ul class="bread-crumbs">
+<!---->                    <a id="ember10" class="ember-view no-underline" href="https://learn.zybooks.com/library">
+                        <li class="bread-crumb">My library</li>
+                    </a>
+                        <span aria-hidden="true" class="divider">&gt;</span>
+                    <a id="ember383" class="ember-view active no-underline" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023">
+                        <li class="bread-crumb">CE 1337/CS 1337: Computer Science I home</li>
+                    </a>
+                        <span aria-hidden="true" class="divider">&gt;</span>
+                    <a id="ember384" class="ember-view active no-underline" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/5">
+                        <li class="bread-crumb">1.5: HW3</li>
+                    </a>
+            </ul>
+</div>
+
+    </div>
+    <div class="right-buttons">
+<!----><!----><!---->            <a id="ember156" class="ember-view zb-button" href="https://learn.zybooks.com/catalog">
+                <i class="zb-icon material-icons med grey  " role="img" aria-label="zyBooks catalog">
+            library_books
+<!----></i>
+
+                <span aria-hidden="true" class="font-light ml-2 text-base">
+                    zyBooks catalog
+                </span>
+            </a>
+                <a class="no-underline zb-button help-button" href="http://support.zybooks.com/" rel="noopener noreferrer" target="_blank">
+            <i class="zb-icon material-icons med grey  " role="img" aria-label="Help/FAQ">
+            help
+<!----></i>
+
+                <span aria-hidden="true">Help/FAQ</span>
+        </a>
+                <div class="ember-basic-dropdown zb-menu">
+                  <div id="ember6" class="ember-view ember-basic-dropdown-trigger
+       ember-basic-dropdown-trigger--in-place
+      
+      
+       toolbar-menu-toggle" tabindex="0" aria-label="Profile for Estevan Guerra" role="button" data-ebd-id="ember5-trigger" aria-owns="ember-basic-dropdown-content-ember5" aria-controls="ember-basic-dropdown-content-ember5" aria-expanded="false" aria-disabled="false">
+    
+                    <i class="zb-icon material-icons med grey  " role="img" aria-label="account_circle" aria-hidden="true">
+            account_circle
+<!----></i>
+
+                    Estevan Guerra
+                    <i class="zb-icon material-icons med grey  " role="img" aria-label="arrow_drop_down" aria-hidden="true">
+            arrow_drop_down
+<!----></i>
+
+                
+  </div>
+
+                  <div id="ember-basic-dropdown-content-ember5" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+            </div>
+
+    </div>
+</header>
+
+<!---->
+<!---->
+<div aria-label="zybook page" class="route-container zybook-chapter-section-page no-margin-left " role="main">
+<!---->
+    <nav id="ember7" class="zb-nav-menu ember-view hide-nav-menu"><ul class="level-1">
+            <li class="flex-row">
+                    <a id="ember385" class="ember-view flex-row  invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/content-explorer">
+                                <i class="zb-icon material-icons med grey   item-bullet" role="img" aria-label="search" aria-hidden="true">
+            search
+<!----></i>
+
+                                                    <span class="self-center">
+                            Search zyBook
+                        </span>
+                    </a>
+            </li>
+            <li class="flex-row">
+                    <button class="list-toggle invisible" type="button">
+                        <div class="flex-row">
+                                    <i class="zb-icon material-icons med grey   item-bullet" role="img" aria-label="info" aria-hidden="true">
+            info
+<!----></i>
+
+                                                            <span class="self-center list-toggle-title">
+                                About this Material
+                            </span>
+                        </div>
+                    </button>
+            </li>
+            <li>
+                <button aria-expanded="true" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">1)</span>
+                            <span class="list-toggle-title">
+                                Homeworks
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_less" aria-hidden="true">
+            expand_less
+<!----></i>
+
+                    </div>
+                </button>
+
+                    <ul class="level-2">
+                            <li>
+                                <a id="ember437" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/1">
+                                            <span class="item-bullet">1.1</span>
+                                    <span>
+                                        zyLab training: Basics (C++)
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember438" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/2">
+                                            <span class="item-bullet">1.2</span>
+                                    <span>
+                                        zyLab training: Interleaved input / output (C++)
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember439" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/3">
+                                            <span class="item-bullet">1.3</span>
+                                    <span>
+                                        HW1
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember440" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/4">
+                                            <span class="item-bullet">1.4</span>
+                                    <span>
+                                        HW2
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember441" class="ember-view active invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/5">
+                                            <span class="item-bullet">1.5</span>
+                                    <span>
+                                        HW3
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember442" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/6">
+                                            <span class="item-bullet">1.6</span>
+                                    <span>
+                                        HW4
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember443" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/7">
+                                            <span class="item-bullet">1.7</span>
+                                    <span>
+                                        HW5
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember444" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/8">
+                                            <span class="item-bullet">1.8</span>
+                                    <span>
+                                        HW6
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember445" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/9">
+                                            <span class="item-bullet">1.9</span>
+                                    <span>
+                                        HW7
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember446" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/10">
+                                            <span class="item-bullet">1.10</span>
+                                    <span>
+                                        HW8
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember447" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/11">
+                                            <span class="item-bullet">1.11</span>
+                                    <span>
+                                        HW9
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember448" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/12">
+                                            <span class="item-bullet">1.12</span>
+                                    <span>
+                                        HW10
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember449" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/13">
+                                            <span class="item-bullet">1.13</span>
+                                    <span>
+                                        HW11
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember450" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/14">
+                                            <span class="item-bullet">1.14</span>
+                                    <span>
+                                        Demo
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember451" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/15">
+                                            <span class="item-bullet">1.15</span>
+                                    <span>
+                                        HW3 - copy
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember452" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/16">
+                                            <span class="item-bullet">1.16</span>
+                                    <span>
+                                        HW5 - Copy
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember453" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/17">
+                                            <span class="item-bullet">1.17</span>
+                                    <span>
+                                        HW7 - copy
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember454" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/18">
+                                            <span class="item-bullet">1.18</span>
+                                    <span>
+                                        Clone of HW2
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember455" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/19">
+                                            <span class="item-bullet">1.19</span>
+                                    <span>
+                                        Clone of HW8
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember456" class="ember-view invisible" target="_blank" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/print">
+                                            <i class="zb-icon material-icons med grey   item-bullet" role="img" aria-label="print">
+            print
+<!----></i>
+
+                                                                            <span>
+                                        Print chapter
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                    </ul>
+            </li>
+            <li>
+                <button aria-expanded="true" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">2)</span>
+                            <span class="list-toggle-title">
+                                Exos
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_less" aria-hidden="true">
+            expand_less
+<!----></i>
+
+                    </div>
+                </button>
+
+                    <ul class="level-2">
+                            <li>
+                                <a id="ember386" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/1">
+                                            <span class="item-bullet">2.1</span>
+                                    <span>
+                                        Exo_search
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember387" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/2">
+                                            <span class="item-bullet">2.2</span>
+                                    <span>
+                                        Exo_lin_search_dry_run
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember388" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/3">
+                                            <span class="item-bullet">2.3</span>
+                                    <span>
+                                        Exo_search_sort_dry_run
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember389" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/4">
+                                            <span class="item-bullet">2.4</span>
+                                    <span>
+                                        Exo_sort
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember390" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/5">
+                                            <span class="item-bullet">2.5</span>
+                                    <span>
+                                        Exo_pointers
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember391" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/6">
+                                            <span class="item-bullet">2.6</span>
+                                    <span>
+                                        Exo_pointers_arrays
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember392" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/7">
+                                            <span class="item-bullet">2.7</span>
+                                    <span>
+                                        Exo_pointers_parameters
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember393" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/8">
+                                            <span class="item-bullet">2.8</span>
+                                    <span>
+                                        Exo_pointer_const
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember394" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/9">
+                                            <span class="item-bullet">2.9</span>
+                                    <span>
+                                        Exo_new
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember395" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/10">
+                                            <span class="item-bullet">2.10</span>
+                                    <span>
+                                        Exo_C_string
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember396" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/11">
+                                            <span class="item-bullet">2.11</span>
+                                    <span>
+                                        Exo_Cpp_string_class
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember397" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/12">
+                                            <span class="item-bullet">2.12</span>
+                                    <span>
+                                        Exo_struct
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember398" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/13">
+                                            <span class="item-bullet">2.13</span>
+                                    <span>
+                                        Exo_struct2
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember399" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/14">
+                                            <span class="item-bullet">2.14</span>
+                                    <span>
+                                        Exo_class
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember400" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/15">
+                                            <span class="item-bullet">2.15</span>
+                                    <span>
+                                        Exo_separate_Student
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember401" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/16">
+                                            <span class="item-bullet">2.16</span>
+                                    <span>
+                                        Exo_constructor
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember402" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/17">
+                                            <span class="item-bullet">2.17</span>
+                                    <span>
+                                        Exo_destructor
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember403" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/18">
+                                            <span class="item-bullet">2.18</span>
+                                    <span>
+                                        Exo_constructor_destructor
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember404" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/19">
+                                            <span class="item-bullet">2.19</span>
+                                    <span>
+                                        Exo_array_objects
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember405" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/20">
+                                            <span class="item-bullet">2.20</span>
+                                    <span>
+                                        Exo_static
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember406" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/21">
+                                            <span class="item-bullet">2.21</span>
+                                    <span>
+                                        Exo_copy_constructor
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember407" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/22">
+                                            <span class="item-bullet">2.22</span>
+                                    <span>
+                                        Exo_overloaded
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember408" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/23">
+                                            <span class="item-bullet">2.23</span>
+                                    <span>
+                                        Exo_overloaded2
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember409" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/24">
+                                            <span class="item-bullet">2.24</span>
+                                    <span>
+                                        Exo_inheritance
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember410" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/25">
+                                            <span class="item-bullet">2.25</span>
+                                    <span>
+                                        Exo_access
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember411" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/26">
+                                            <span class="item-bullet">2.26</span>
+                                    <span>
+                                        Exo_redefine
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember412" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/27">
+                                            <span class="item-bullet">2.27</span>
+                                    <span>
+                                        Exo_virtual_base_class_ptr
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember413" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/28">
+                                            <span class="item-bullet">2.28</span>
+                                    <span>
+                                        Exo_base_class_array
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember414" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/29">
+                                            <span class="item-bullet">2.29</span>
+                                    <span>
+                                        Exo_pure_virtual
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember415" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/30">
+                                            <span class="item-bullet">2.30</span>
+                                    <span>
+                                        Exo_catch_matching_type
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember416" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/31">
+                                            <span class="item-bullet">2.31</span>
+                                    <span>
+                                        Exo_exception_class
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember417" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/32">
+                                            <span class="item-bullet">2.32</span>
+                                    <span>
+                                        Exo_exception_class_loop_single_try
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember418" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/33">
+                                            <span class="item-bullet">2.33</span>
+                                    <span>
+                                        Exo_printf
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember419" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/34">
+                                            <span class="item-bullet">2.34</span>
+                                    <span>
+                                        Exo_scanf
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember420" class="ember-view invisible" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/section/35">
+                                            <span class="item-bullet">2.35</span>
+                                    <span>
+                                        Exo_struct_malloc
+                                    </span>
+                                    <div class="section-labels">
+                                            <span class="nav-item-label-lab">Lab</span>
+<!---->                                            <span class="nav-item-label-hidden">Hidden</span>
+<!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember421" class="ember-view invisible" target="_blank" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/2/print">
+                                            <i class="zb-icon material-icons med grey   item-bullet" role="img" aria-label="print">
+            print
+<!----></i>
+
+                                                                            <span>
+                                        Print chapter
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                    </ul>
+            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">3)</span>
+                            <span class="list-toggle-title">
+                                Introduction to C++
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">4)</span>
+                            <span class="list-toggle-title">
+                                Variables / Assignments
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">5)</span>
+                            <span class="list-toggle-title">
+                                Branches
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">6)</span>
+                            <span class="list-toggle-title">
+                                Loops
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">7)</span>
+                            <span class="list-toggle-title">
+                                Arrays / Vectors
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">8)</span>
+                            <span class="list-toggle-title">
+                                User-Defined Functions
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">9)</span>
+                            <span class="list-toggle-title">
+                                Objects and Classes
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">10)</span>
+                            <span class="list-toggle-title">
+                                Pointers
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">11)</span>
+                            <span class="list-toggle-title">
+                                Streams
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">12)</span>
+                            <span class="list-toggle-title">
+                                Inheritance
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">13)</span>
+                            <span class="list-toggle-title">
+                                Recursion
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">14)</span>
+                            <span class="list-toggle-title">
+                                Exceptions
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">15)</span>
+                            <span class="list-toggle-title">
+                                Templates
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">16)</span>
+                            <span class="list-toggle-title">
+                                Containers
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">17)</span>
+                            <span class="list-toggle-title">
+                                Searching and Sorting Algorithms
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">18)</span>
+                            <span class="list-toggle-title">
+                                Coding Practice Problems
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">19)</span>
+                            <span class="list-toggle-title">
+                                Additional Labs: Variables / Assignments
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">20)</span>
+                            <span class="list-toggle-title">
+                                Additional Labs: Branches
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">21)</span>
+                            <span class="list-toggle-title">
+                                Additional Labs: Loops
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">22)</span>
+                            <span class="list-toggle-title">
+                                Additional Labs: Arrays / Vectors
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">23)</span>
+                            <span class="list-toggle-title">
+                                Additional Labs: User-Defined Functions
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">24)</span>
+                            <span class="list-toggle-title">
+                                Additional Labs: Objects and Classes
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">25)</span>
+                            <span class="list-toggle-title">
+                                Additional Labs: Recursion
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">26)</span>
+                            <span class="list-toggle-title">
+                                Additional Labs: Introduction to C++
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">27)</span>
+                            <span class="list-toggle-title">
+                                Additional Labs: Pointers
+                            </span>
+                        </div>
+<!---->                            <i class="zb-icon material-icons med grey   item-icon" role="img" aria-label="expand_more" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+</ul>
+</nav>
+
+    <section class="section-container">
+<!---->    
+
+        <nav aria-label="previous section" class="section-nav previous">
+                <a id="ember423" class="ember-view nav-link" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/4">
+                    <i class="zb-icon material-icons sm secondary  " role="img" aria-label="arrow_upward" aria-hidden="true">
+            arrow_upward
+<!----></i>
+
+                    <span class="nav-text previous">
+                        1.4 HW2
+                    </span>
+                </a>
+        </nav>
+
+    <div aria-label="section content" role="main">
+<!---->
+            <div class="section-announcement zb-card secondary">
+        <div class="icon-container">
+            <i class="zb-icon material-icons xl white  " role="img" aria-label="info">
+            info
+<!----></i>
+
+        </div>
+
+        <div class="message-title-container">
+            <div class="announcement-title">Students:</div>
+            <div class="message">This content is controlled by your instructor, and is not zyBooks content. Direct questions or concerns about this content to your instructor. If you have any technical issues with the zyLab submission system, use the <span class="primary-font-bold">Trouble with lab</span> button at the bottom of the lab.</div>
+        </div>
+
+<!---->
+<!----></div>
+
+
+<!---->
+            <div class="section-announcement zb-card primary assignment-section-announcement">
+        <div class="icon-container">
+            <i class="zb-icon material-icons xl white  " role="img" aria-label="assignment">
+            assignment
+<!----></i>
+
+        </div>
+
+<!---->
+        <div class="section-announcement-block-content">
+                <span class="announcement-title">Students:</span>
+                <div class="assignment-announcement-content">
+                    <div class="title-message">
+                        <div class="assignment-title">
+                            <span>
+                                Section 1.5 is a part of
+                                1 assignment:
+                            </span>
+                                <span class="title-text">HW3</span>
+<!---->                        </div>
+                        <div class="error">
+<!----><!---->                        </div>
+                    </div>
+                    <div>
+                        <div class="flex flex-row mb-2">
+                            <span class="mr-1">Requirements:</span>
+<!----><!---->                                <div class="mx-1 zb-chevron   green  filled  small" role="img">
+    
+</div>
+
+                                <span class="mx-1">zyLab</span>
+<!---->                        </div>
+                            <div class="assignment-due-date-lms-details in-section col-start-2">
+            <div class="due-date-text body-text  flex items-center">
+                        Due: 02/22/2023, 11:59 PM CST
+            </div>
+<!----><!----></div>
+
+                    </div>
+                </div>
+            </div>
+
+<!----></div>
+
+
+<!---->
+<!---->
+<!---->
+        <article id="ember424" class="zb-card ember-view zybook-section"><div class="zb-card-content ">
+    
+<!----><!---->    <div class="section-header-row">
+        <h1 canonical_section_guid="88d37129-093a-4d75-9368-7748044341c6" canonical_section_id="26352519" class="zybook-section-title">
+            1.5 HW3
+        </h1>
+            <div class="section-action-container">
+<!---->
+<!----><!----><!----><!---->
+<!---->            </div>
+    </div>
+
+<!---->
+<!---->
+<!---->
+<!---->
+        <div class="section-content-resources-container">
+                        <div id="ember425" class="content-resource markdown-content-resource ember-view"><div id="ember426" class="ember-view"><p>This homework assignment gives you the opportunity to practice strings (C++ string class) and chars.  </p>
+<h1 id="hw3gradedoutof100">HW3 (Graded out of 100)</h1>
+<p>Write a program that performs input validation when reading grocery product records from a file. Each grocery product record consists of the following 5  items:<br>
+    - PLU code: Product Look Up Code. Unique for each product, stored as a string.<br>
+    - Product Name, stored as a string<br>
+    - Product Sales Type: 0 = per unit, 1 = per pound<br>
+    - Price per Pound or price per unit,<br>
+    - Current Inventory Level (pounds or units).<br>
+Below is an example of file content. In this example, there are four records, and each line corresponds to a record.<br>
+A001 Apples 1 0.90 21<br>
+A002 Peaches 1 0.82 11<br>
+A006 Avocados 0 1.54 27<br>
+A008 Mangos 0 1.69 19<br>
+Your program should read a file and performs input validation on the items read, then print the outcome of the input validation:<br>
+File  has valid content if all the data is valid<br>
+File  has invalid content otherwise, along with the reason.  </p>
+<p>To contain valid data, the file must have only valid records. A record is valid if<br>
+•    It has exactly 5 items on the same line<br>
+•    The first item should be a PLU. It is valid if and only if it contains only letters or digits, and is 4 characters long<br>
+•    The second item should be product name. It is valid if and only if the first character is a letter<br>
+•    The third item should be a sales type. It is valid if and only if it is only one character, and the character is a 1 or a 0<br>
+•    The fourth item should be a unit price. It is valid if and only if it contains only digits and at most one dot. If there is a dot, there are at most two digits after the dot<br>
+•    The fifth item should be the inventory level. It is valid if and only if it contains only digits<br>
+In order to validate the individual items, each line has first to be broken into tokens, where a token is a string that corresponds to an item. The tokens are separated by one or more delimiters, where a delimiter is a space, a tab, a new line or a carriage return. To take the line<br>
+A001  Apples  1  0.90  21<br>
+as an example, the first token would be A001, the second token would be Apples, and so on. You may assume each line contains at most only one record.  </p>
+<h3 id="1additionalrequirementsmakesureyoumeetalltherequirementstoavoidlosingpoints">1.    Additional Requirements – Make sure you meet all the requirements to avoid losing points</h3>
+<h4 id="afunctions">a)    Functions</h4>
+<p>You are required to implement your program with these functions. You are encouraged to implement more functions  to make your program more modular if you wish.</p>
+<pre><code>/* Returns true if the string is a valid price, false otherwise 
+*/
+bool isValidPrice(string); 
+
+/* Takes as reference parameter a string to be tokenized and returns the first token found
+Returns the empty string if no token is found
+The function deletes any leading delimiter and the first token found from the original string
+Tokenization is based on a delimiter, where a delimiter is the '\t' (tab) , '  ' (space), ‘\n’ (new line) or ‘\r’ (carriage return)  character  
+Example: if the string s  is "\t abcd\t\t 345\t ^7$ ", the function returns "abcd" as the first token found, and modifies
+the string s to become "\t\t 345\t ^7$ " 
+*/ 
+string tokenize(string &amp;); 
+</code></pre>
+<h4 id="bstyle">b)    Style</h4>
+<p>Make sure you follow the style requirements, especially regarding the comment header for functions, and use function prototypes for all your functions, to avoid losing points.    </p>
+<h3 id="2implementationnotes">2.    Implementation Notes</h3>
+<p>You are allowed to use any of the existing library functions in chapter 10 of the Gaddis textbook.  </p>
+<h4 id="asuggestedoutlineofprogramslogicnotalldetailsareshown">a)    Suggested outline of program’s logic – Not all details are shown</h4>
+<pre><code>Have an outer loop to repeatedly read the file line by line. Exit the loop at the end of the file  
+   Inner loop: for each line, repeatedly call tokenize to extract the tokens, up to the last one  
+      Count the number of tokens extracted so far for the line  
+      If the number of tokens so far &gt; 5, print the appropriate error message(s) and terminate  
+      Check if the item is invalid. If so, print the appropriate error message(s) and terminate  
+   If the number of tokens for the line &lt; 5, print the appropriate error message(s) and terminate  
+If all validations are successful, print a message to indicate the file is valid 
+</code></pre>
+<p>Notes:<br>
+To read line by line, you can use getline(inFile, stringRead)<br>
+Detect end of file when getline returns an empty string<br>
+Use the appropriate validation logic based on the token counter. For example, for the first token which should be the PLU, perform PLU validation. For the second token, perform name validation, etc.<br>
+To pass the test cases, all messages indicating valid/invalid file should end with a new line</p>
+<h4 id="bsuggestedoutlineofstringtokenizestrings">b)    Suggested outline of string tokenize(string &amp; s)</h4>
+<pre><code>Loop over the characters of s as long as they are a delimiter and the end of s is not reached // To handle leading delimiter(s), if any   
+Loop over the remaining characters as long as they are not a delimiter and the end of s is not reached  // Extract the first token found
+    store the characters into token  
+Delete the first n characters from s  // n is the number of characters looped over in the two above loops  
+Return token  
+</code></pre>
+<h4 id="ctoprinttheunderline">c)    To print the underline</h4>
+<p>Your code will have to underline the message "Checking in.txt", "Checking in0.txt", etc. with a string of '-'  (refer to the screen outputs), but the length of the string depends on the file name. To determine the proper length to print, apply the .length() member function to the message.   </p>
+<h3 id="3gradingcriteria">3.    Grading criteria</h3>
+<ul>
+<li>Source code inspection (grader)<br>
+*Style: 10 points (refer to the “Homework Notes” for the style requirements)<br>
+*Required: Use function prototypes for all functions. 10 points will be deducted for non conformance  </li>
+<li>Code compilation and execution (zylabs)<br>
+*Test-1 – Valid file – Output exactly matches output-1: 8 points<br>
+*Test-2 – File with invalid PLU – Output exactly matches output-2: 8 points<br>
+*Test-3 – File with invalid product name – Output exactly matches output-3: 8 points<br>
+*Test-4 – File with invalid sales type – Output exactly matches output-4: 8 points<br>
+*Test-5 – File with invalid price – Output exactly matches output-5: 8 points<br>
+*Test-6 – File with invalid inventory – Output exactly matches output-6: 8 points<br>
+*Test-7 – File with excessive number of items – Output exactly matches output-7: 8 points<br>
+*Test-8 – File with insufficient number of items – Output exactly matches output-8: 8 points<br>
+*Test-9 – File with invalid price – Output exactly matches output-9: 8 points<br>
+*Test-10 – tokenize unit test: 10 points<br>
+*Test-11 – isValidPrice unit test: 8 points  </li>
+</ul>
+<h3 id="4screenoutputs">4.    Screen outputs</h3>
+<pre><code>Enter input file:in.txt
+
+Checking in.txt
+---------------
+
+Token #1 is A001, PLU is valid
+Token #2 is Apples, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is 0.90, Price is valid
+Token #5 is 21, Inventory is valid
+
+Token #1 is A002, PLU is valid
+Token #2 is Peaches, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is 0.82, Price is valid
+Token #5 is 11, Inventory is valid
+
+Token #1 is A009, PLU is valid
+Token #2 is Strawberries_Case, Product name is valid
+Token #3 is 0, Sales type is valid
+Token #4 is 12.50, Price is valid
+Token #5 is 8, Inventory is valid
+
+Token #1 is 4261, PLU is valid
+Token #2 is Rice_1_LB_Bag, Product name is valid
+Token #3 is 0, Sales type is valid
+Token #4 is 0.49, Price is valid
+Token #5 is 107, Inventory is valid
+
+######## in.txt has valid content ########
+</code></pre>
+<p><strong>Output-1</strong>  </p>
+<pre><code>Enter input file:in0.txt
+
+Checking in0.txt
+----------------
+
+Token #1 is A001, PLU is valid
+Token #2 is Apples, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is 0.90, Price is valid
+Token #5 is 21, Inventory is valid
+
+Token #1 is A00%, PLU is invalid
+
+######## in0.txt has invalid content ########
+</code></pre>
+<p><strong>Output-2</strong>    </p>
+<pre><code>Enter input file:in1.txt
+
+Checking in1.txt
+----------------
+
+Token #1 is A001, PLU is valid
+Token #2 is Apples, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is 0.90, Price is valid
+Token #5 is 21, Inventory is valid
+
+Token #1 is A002, PLU is valid
+Token #2 is [eaches, Product name is invalid
+
+######## in1.txt has invalid content ########
+</code></pre>
+<p><strong>Output-3</strong>  </p>
+<pre><code>Enter input file:in2.txt
+
+Checking in2.txt
+----------------
+
+Token #1 is A001, PLU is valid
+Token #2 is Apples, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is 0.90, Price is valid
+Token #5 is 21, Inventory is valid
+
+Token #1 is A002, PLU is valid
+Token #2 is Peaches, Product name is valid
+Token #3 is 11, Sales type is invalid
+
+######## in2.txt has invalid content ########
+</code></pre>
+<p><strong>Output-4</strong>  </p>
+<pre><code>Enter input file:in3.txt
+
+Checking in3.txt
+----------------
+
+Token #1 is A001, PLU is valid
+Token #2 is Apples, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is -0.90, Price is invalid
+
+######## in3.txt has invalid content ########
+</code></pre>
+<p><strong>Output-5</strong>  </p>
+<pre><code>Enter input file:in4.txt
+
+Checking in4.txt
+----------------
+
+Token #1 is A001, PLU is valid
+Token #2 is Apples, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is 0.90, Price is valid
+Token #5 is 21, Inventory is valid
+
+Token #1 is A002, PLU is valid
+Token #2 is Peaches, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is 0.82, Price is valid
+Token #5 is 11., Inventory is invalid
+
+######## in4.txt has invalid content ########
+</code></pre>
+<p><strong>Output-6</strong>  </p>
+<pre><code>Enter input file:in5.txt
+
+Checking in5.txt
+----------------
+
+Token #1 is A001, PLU is valid
+Token #2 is Apples, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is 0.90, Price is valid
+Token #5 is 21, Inventory is valid
+
+Token #1 is A002, PLU is valid
+Token #2 is Peaches, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is 0.82, Price is valid
+Token #5 is 11, Inventory is valid
+Token #6 is &amp;^, Too many items in record
+
+######## in5.txt has invalid content ########
+</code></pre>
+<p><strong>Output-7</strong>   </p>
+<pre><code>Enter input file:in6.txt
+
+Checking in6.txt
+----------------
+
+Token #1 is A001, PLU is valid
+Token #2 is Apples, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is 0.90, Price is valid
+Inventory is invalid, record has missing items
+
+######## in6.txt has invalid content ########
+</code></pre>
+<p><strong>Output-8</strong>  </p>
+<pre><code>Enter input file:in7.txt
+
+Checking in7.txt
+----------------
+
+Token #1 is A001, PLU is valid
+Token #2 is Apples, Product name is valid
+Token #3 is 1, Sales type is valid
+Token #4 is 0.907, Price is invalid
+
+######## in7.txt has invalid content ########
+</code></pre>
+<p><strong>Output-9</strong>  </p>
+</div>
+</div>
+        
+            <div class="activity-watermark">460884.2783542.qx3zqy7</div>
+
+<!---->            <div content_resource_guid="622cec18-fa9f-46f4-b852-6912e2ec0cc1" content_resource_id="88289697" id="ember427" class="interactive-activity-container programming-submission-content-resource lab large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="lab activity" class="activity-type">
+        lab activity
+    </div>
+
+    <div class="activity-description">
+            <div class="activity-title">
+                1.5.1:
+                    HW3<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!---->
+                    <span class="lab-score">0 / 90</span>
+
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember430" class="content-resource programming-submission-payload ember-view">    <div id="ember431" class="submit-files ember-view"><div class="section-header">Submission Instructions</div>
+
+<div id="ember432" class="download-files ember-view">    <div class="sub-header">Downloadable files</div>
+
+    <div class="files-dl-row">
+        <div class="filenames-row">
+<!---->                <div class="programming-code-output">in.txt</div>
+                    <span>,</span>
+<!---->                <div class="programming-code-output">in1.txt</div>
+                    <span>,</span>
+<!---->                <div class="programming-code-output">in6.txt</div>
+                    <span>,</span>
+<!---->                <div class="programming-code-output">in0.txt</div>
+                    <span>,</span>
+<!---->                <div class="programming-code-output">in4.txt</div>
+                    <span>,</span>
+<!---->                <div class="programming-code-output">in3.txt</div>
+                    <span>,</span>
+<!---->                <div class="programming-code-output">in5.txt</div>
+                    <span>,</span>
+<!---->                <div class="programming-code-output">in2.txt</div>
+<!---->                    <span>, and</span>
+                <div class="programming-code-output">in7.txt</div>
+<!----><!---->
+        </div>
+
+        <button aria-disabled="false" class="zb-button  secondary             download-files-button" type="button">
+<!---->            <span class="title">Download</span>
+<!----></button>
+
+    </div>
+</div>
+
+    <div class="sub-header">Compile command</div>
+    <div class="centered-row">
+        <div class="programming-code-output">g++ main.cpp -Wall -Wextra -pedantic-errors -pedantic -o a.out</div>
+        <span class="sub-text">We will use this command to compile your code</span>
+    </div>
+
+<div class="submit-instructions">Upload your files below by dragging and dropping into the area or choosing a file on your hard drive.</div>
+
+<div class="files-row centered-row">
+        <div class="file-container">
+            <div class="file">
+                <div id="ember433" class="zb-truncate-text ember-view file-name bold">main.cpp
+</div>
+                <div class="file-submission-text">
+                        <span>Drag file here</span>
+                        <span>or</span>
+                        <button aria-disabled="false" class="zb-button zb-file-input secondary            " type="button">
+<!---->            <span class="title">Choose on hard drive.</span>
+<!----></button>
+
+                </div>
+            </div>
+        </div>
+</div>
+<ul>
+<!----></ul>
+</div>
+
+<!---->
+    <div>
+            <div class="submit-container">
+    <div class="submission-row">
+        <button aria-disabled="true" class="zb-button  primary  raised disabled          submit-button" type="button">
+<!---->            <span class="title">Submit for grading</span>
+<!----></button>
+
+
+<!---->
+<!---->
+        <div class="submission-cap-throttle-container">
+                <span class="throttle-cap-text">
+                        40 submissions left
+                </span>
+<!---->        </div>
+    </div>
+
+<!---->
+<!---->
+    <div class="zylab-signature">
+
+        <div class="signature-header">
+            <span>Coding trail of your work</span>
+            <button aria-disabled="false" class="zb-button  grey       thin-title no-padding     header-link" type="button">
+<!---->            <span class="title">What is this?</span>
+<!----></button>
+
+        </div>
+
+    <div class="signature-content code-block-styling">
+                <span>
+                        History of your effort will appear here once you begin working on this zyLab.
+                </span>
+            </div>
+
+<!----></div>
+
+    <div id="ember434" class="zb-card ember-view latest-submission"><div class="zb-card-content ">
+    
+            <div class="latest-submission-header">
+                <span>Latest submission</span>
+<!---->            </div>
+                <div class="no-submissions-text">No submissions yet</div>
+    
+</div>
+</div>
+<!----></div>
+
+    </div>
+
+<!---->
+<!---->
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember428">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button aria-disabled="false" class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Trouble with lab?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+<!---->
+        </div>
+
+<!---->
+<!---->
+</div>
+</article>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+
+            <div id="ember435" class="zb-card ember-view assignment-completion-summary-card"><div class="zb-card-content ">
+    
+    <div class="header-row">
+        <div class="assignment-completion-header">
+            Activity summary for assignment:
+                HW3
+<!---->        </div>
+        <div class="points-text-submit-button">
+            <span class="points-completed-text">
+                0 / 90 pts
+            </span>
+<!---->        </div>
+    </div>
+    <div class="due-date-message-row">
+            <div>
+                <div class="due-date-text">
+                    <div class="assignment-due-date-lms-details in-section">
+            <div class="due-date-text body-text  flex items-center">
+                        Due: 02/22/2023, 11:59 PM CST
+            </div>
+<!----><!----></div>
+
+                </div>
+<!---->            </div>
+        <div class="submission-messaging-container">
+<!----><!---->        </div>
+    </div>
+        <button aria-disabled="false" class="zb-button  secondary     right      icon-button-with-title  expand-sections" type="button">
+            <i class="zb-icon material-icons med secondary  " role="img" aria-label="keyboard_arrow_down" aria-hidden="true">
+            keyboard_arrow_down
+<!----></i>
+
+            <span class="title">Completion details</span>
+<!----></button>
+
+<!---->
+</div>
+</div>
+
+
+<!---->    </div>
+
+<!---->
+        <nav aria-label="next section" class="section-nav next">
+                <a id="ember436" class="ember-view nav-link" href="https://learn.zybooks.com/zybook/UTDALLASCE1337CS1337LeSpring2023/chapter/1/section/6">
+                    <i class="zb-icon material-icons sm secondary  " role="img" aria-label="arrow_downward" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+                    <span class="nav-text next">
+                        1.6 HW4
+                    </span>
+                </a>
+        </nav>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+</section>
+
+
+<!---->
+<!---->
+
+<!----></div>
+<div class="disable-lazy-typesetting"></div></body></html>

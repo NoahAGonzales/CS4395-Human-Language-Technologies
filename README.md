@@ -32,3 +32,9 @@ Execute the following command:
 > python Homework2_nag180001.py *path.txt*
 
 Homework2_nag180001.py can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/21e50defca4c63080bb6f54d82e7bb5567324c86/Homework2/Homework2_nag180001.py).
+
+
+## Homework 3 - Wordnet
+This is a notebook containing some play with WordNet.
+The notebook can be found [here]()
+
