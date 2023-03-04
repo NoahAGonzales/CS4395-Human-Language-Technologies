@@ -39,7 +39,7 @@ This is a notebook containing some play with WordNet.
 The notebook can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/129340376f09cbc09028c70dad6e6191b16bf686/Homework3/HLT3_nag180001.ipynb)
 
 
-## Homework 4 - n-grams
+## Homework 4 - N Gram Language Model
 This assignment consists of 3 parts: a [python script](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/b73221efc7121e7ad271c3bd6b00f95a8a226477/Homework4/Homework4-1_nag180001.py) that writes dictionaries of unigrams and bigrams for each language (English, French, and Italian) to files, a [python script](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/b73221efc7121e7ad271c3bd6b00f95a8a226477/Homework4/Homework4-2_nag180001.py) that classifies a test file of text as one of those three languages and determines the accuracy of the classification, and a [paper](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/b73221efc7121e7ad271c3bd6b00f95a8a226477/Homework4/Homework4-3_nag180001.pdf) containing information on n-grams and their use.
 
 ### To run
