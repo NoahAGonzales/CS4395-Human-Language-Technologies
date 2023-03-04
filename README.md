@@ -53,4 +53,4 @@ To run the second script, which classifies the test file as one of three languag
 Ensure that the necessary files (data folder) are /Homework4.
 
 ## Homework 5 - Sentence parsing
-THis assignment involves parsing a sentence in three different ways, including constituent parsing, dependency parsing, and semantic role label parsing and analyzing the pros and cons of each method. [This]() document contains each parse and the pros and cons of such.
+This assignment involves parsing a sentence in three different ways, including constituent parsing, dependency parsing, and semantic role label parsing and analyzing the pros and cons of each method. [This](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/362e742b2f1b7cda775642c4b2a0e1db9499bbbd/Homework5/Homework5_nag180001.pdf) document contains each parse and the pros and cons of such.
