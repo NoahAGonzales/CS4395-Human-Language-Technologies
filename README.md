@@ -43,9 +43,11 @@ The notebook can be found [here](https://github.com/NoahAGonzales/CS4395-Human-L
 This assignment consists of 3 parts: a [python script](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/b73221efc7121e7ad271c3bd6b00f95a8a226477/Homework4/Homework4-1_nag180001.py) that writes dictionaries of unigrams and bigrams for each language (English, French, and Italian) to files, a [python script](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/b73221efc7121e7ad271c3bd6b00f95a8a226477/Homework4/Homework4-2_nag180001.py) that classifies a test file of text as one of those three languages and determines the accuracy of the classification, and a [paper](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/b73221efc7121e7ad271c3bd6b00f95a8a226477/Homework4/Homework4-3_nag180001.pdf) containing information on n-grams and their use.
 
 ### To run
-To run the first script, which writes dictionaries of unigrams and bigrams to files, execute the following command in Homework4:
+To run the first script, which writes dictionaries of unigrams and bigrams to files, execute the following command in /Homework4:
 > python Homework4-1_nag180001.py
+Ensure that the necessary files (data folder) are /Homework4.
 
 
-To run the second script, which classifies the test file as one of three languages, execute the following command in Homework4:
+To run the second script, which classifies the test file as one of three languages, execute the following command in /Homework4:
 > python Homework4-2_nag180001.py
+Ensure that the necessary files (data folder) are /Homework4.
