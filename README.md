@@ -10,7 +10,7 @@ The document can be found [here](https://github.com/NoahAGonzales/CS4395-Human-L
 This python program processes a csv data file by extracting and validating information about the persons in such.
 
 ### To run
-Execute the following command:
+Execute the following command in /Homework1:
 > python Homework1_nag180001.py *path.csv*
 
 Homework1_nag180001.py can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/03f8d9fa7e4305c78397c615cd8d086383db9301/Homework1/Homework1_nag180001.py).
@@ -28,7 +28,7 @@ Consequently, I knew the concepts for parsing strings and regex - pickle was new
 This python program is a word guessing game that utilizes NLTK features to process text for the game.
 
 ### To run
-Execute the following command:
+Execute the following command in /Homework2:
 > python Homework2_nag180001.py *path.txt*
 
 Homework2_nag180001.py can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/21e50defca4c63080bb6f54d82e7bb5567324c86/Homework2/Homework2_nag180001.py).
@@ -40,4 +40,12 @@ The notebook can be found [here](https://github.com/NoahAGonzales/CS4395-Human-L
 
 
 ## Homework 4 - n-grams
-This assignment consists of 3 parts: a [python script]() that writes files containing dictionaries of unigrams and bigrams for each language (English, French, and Italian), a [python script]() that classifies a test file of text as one of those three languages and determines the accuracy of the classification, and a [paper]() containing information on n-grams and their use.
+This assignment consists of 3 parts: a [python script]() that writes dictionaries of unigrams and bigrams for each language (English, French, and Italian) to files, a [python script]() that classifies a test file of text as one of those three languages and determines the accuracy of the classification, and a [paper]() containing information on n-grams and their use.
+
+### To run
+To run the first script, which writes dictionaries of unigrams and bigrams to files, execute the following command in Homework4:
+> python Homework4-1_nag180001.py
+
+
+To run the second script, which classifies the test file as one of three languages, execute the following command in Homework4:
+> python Homework4-2_nag180001.py
