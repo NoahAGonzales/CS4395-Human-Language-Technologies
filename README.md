@@ -51,3 +51,6 @@ Ensure that the necessary files (data folder) are /Homework4.
 To run the second script, which classifies the test file as one of three languages, execute the following command in /Homework4:
 > python Homework4-2_nag180001.py
 Ensure that the necessary files (data folder) are /Homework4.
+
+## Homework 5 - Sentence parsing
+THis assignment involves parsing a sentence in three different ways, including constituent parsing, dependency parsing, and semantic role label parsing and analyzing the pros and cons of each method. [This]() document contains each parse and the pros and cons of such.
