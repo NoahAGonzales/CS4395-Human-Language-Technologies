@@ -15,10 +15,11 @@ def compute_prob (text, unigram_dict, bigram_dict, num_tokens, vocab_size):
   unigrams = word_tokenize(text)
   bigrams = list(ngrams (unigrams, 2))
 
-  p_gt = 1 # Good-Turing
+  p_gt = 1 # Good-Turing smoothing
   p_laplace = 1 # laplace smoothing
   p_log = 0
 
+  # Computer probabilities
   for bigram in bigrams:
     n = bigram_dict[bigram] if bigram in bigram_dict else 0
     n_gt = bigram_dict[bigram] if bigram in bigram_dict else 1/num_tokens
@@ -30,7 +31,7 @@ def compute_prob (text, unigram_dict, bigram_dict, num_tokens, vocab_size):
     p_laplace = p_laplace * ((n + 1) / (d + vocab_size))
     p_log = p_log + math.log((n + 1) / (d + vocab_size))
 
-  # 30% accuracy with simplified Good-Turing smoothing
+  # 30% accuracy with simplified Good-Turing smoothing ?? idk
   # 97.3% Accuracy with laplace smoothing
   # 99.3% accuracy with log of laplace smoothing
   return p_log
@@ -74,11 +75,13 @@ def main():
   for line_num in range(0,len(c_lines)):
     if c_lines[line_num] == s_lines[line_num]:
       num_correct += 1
+    else:
+      print("Line", line_num, "is incorrect")
 
   print("Accuracy: ", num_correct / 300)
 
 if __name__ == '__main__':
   main()
 
-    
-    
+# Lines 43 and 91 are incorrect.
+# Both of which are Spanish and are incorrectly classified as Italian.
