@@ -40,8 +40,6 @@ def main():
     pickle.dump(italian[0], open('italian1.p', 'wb'))
     pickle.dump(italian[1], open('italian2.p', 'wb'))
 
-  
-
 if __name__ == '__main__':
   main()
 
