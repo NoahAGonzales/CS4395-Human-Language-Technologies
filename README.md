@@ -38,3 +38,6 @@ Homework2_nag180001.py can be found [here](https://github.com/NoahAGonzales/CS43
 This is a notebook containing some play with WordNet.
 The notebook can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/129340376f09cbc09028c70dad6e6191b16bf686/Homework3/HLT3_nag180001.ipynb)
 
+
+## Homework 4 - n-grams
+This assignment consists of 3 parts: a [python script]() that writes files containing dictionaries of unigrams and bigrams for each language (English, French, and Italian), a [python script]() that classifies a test file of text as one of those three languages and determines the accuracy of the classification, and a [paper]() containing information on n-grams and their use.
