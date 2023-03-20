@@ -54,3 +54,9 @@ Ensure that the necessary files (data folder) are /Homework4.
 
 ## Homework 5 - Sentence parsing
 This assignment involves parsing a sentence in three different ways, including constituent parsing, dependency parsing, and semantic role label parsing and analyzing the pros and cons of each method. [This](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/362e742b2f1b7cda775642c4b2a0e1db9499bbbd/Homework5/Homework5_nag180001.pdf) document contains each parse and the pros and cons of such.
+
+## Homework 6 - Finding or Building a Corpus / web_crawler
+This assignment was to create a corpus using a webcrawler.
+The webcrawler scapes text off of a starting site and related sites linked from that starting site.
+The text is then used to create a knowledge base, which in this case is a pickled dictionary containing terms as keys and an array of sentences containing each term as the value. [This]() document describes the process and assignment.
+The python file can be found [here]()

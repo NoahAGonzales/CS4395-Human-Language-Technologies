@@ -2,10 +2,16 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import math
+import pickle
+import random
 import nltk
 from nltk import word_tokenize
+from nltk import sent_tokenize
 from nltk.corpus import stopwords
 STOPWORDS = stopwords.words('english')
+
+def print_break():
+  print("---------------------------------------------------------")
 
 def web_crawler(url, history):
   page = requests.get(url)
@@ -15,10 +21,10 @@ def web_crawler(url, history):
           "(?!.*(https:\/\/)|.*(http:\/\/))" + # Double links?
           "(?!ru|ja|ar|be|br|ca|cs|bg|de|el|es|fa|fr|gl|ko|it|he|lb|lt|nl|sv|mk|pl|pt|sr|sh|th|tr|vi|zh|uk)" + # Other countries
           "(?!foundation|donate|wikimediafoundation|commons|www\.wikidata|.*action=edit)" + # wiki links that are useless
-          "(?!sport24|grand|natalie|www\.asahi|.*ddnavi)" + # misc
+          "(?!sport24|grand|natalie|www\.asahi|.*ddnavi|.*livre)" + # misc
           "(?!.*\.jp|.*\.fr|.*\.au)" # domains
           )
-  external_urls = [url.attrs['href'] for url in soup.find_all('a', href = re.compile(regex))][:10]
+  external_urls = [url.attrs['href'] for url in soup.find_all('a', href = re.compile(regex))][:15]
 
   # Check for bad urls
   remove = []
@@ -60,40 +66,41 @@ def clean_text(id):
   unformatted = f_unformatted.readlines()
 
   # Open filters
-  to_remove = open("filters/remove.txt", "r", encoding="utf-8").readlines()
-  to_remove_line = open("filters/remove_line.txt", "r", encoding="utf-8").readlines()
+  to_remove_term = open("filters/remove_term.txt", "r", encoding="utf-8").readlines()
+  to_remove_term_line = open("filters/remove_term_line.txt", "r", encoding="utf-8").readlines()
 
-  
   # Apply filters to lines
 
   # remove lines containing terms to remove
   r_l = []
   for line in unformatted:
-    for r in to_remove_line:
+    for r in to_remove_term_line:
       if line.lower().find(r.lower()) != -1:
         r_l.append(line)
         break
-
   for r in r_l:
     unformatted.remove(r)
 
-  # Remove empty lines
-  while '' in unformatted:
-    unformatted.remove('')
-
   unformatted = "\n".join(unformatted)
+
+  # Remove empty lines and whitespace
+  unformatted = '\n'.join([line.strip() for line in unformatted.split('\n') if line.strip()] )
   
   # Apply filters to raw text
-  for remove in to_remove:
+  for remove in to_remove_term:
     unformatted = unformatted.replace(remove, ' ')
 
-  # Modify text
-
-
-  # Last step: remove white space
+  # Remove newlines
   unformatted = unformatted.replace('\n',' ')
-  #unformatted = unformatted.replace()
-  #unformatted = unformatted.replace('\t',' ')
+
+  # Remove unwanted characters
+  
+
+  # Output text as sentences
+  f_formatted_lines = open("output/formatted_lines/text_" + str(id) + ".txt", "w", encoding="utf-8")
+  sentences = nltk.sent_tokenize(unformatted)
+  sentences = "\n".join(sentences)
+  f_formatted_lines.write(sentences)
 
   # Open file to write cleaned up text to
   f_formatted = open("output/formatted/text_" + str(id) + ".txt", "w", encoding="utf-8")
@@ -103,6 +110,7 @@ def clean_text(id):
 
   # Clean up
   f_unformatted.close()
+  f_formatted_lines.close()
   f_formatted.close()
 
   
@@ -112,7 +120,6 @@ def create_tf_dict(text):
   tf_dict = {}
   tokens = word_tokenize(text)
   tokens = [t for t in tokens if t not in STOPWORDS and t.isalpha()]
-
 
   # get term frequencies
   for t in tokens:
@@ -142,12 +149,13 @@ def extract_terms(urls):
     f.close()
     text = text.replace('\n', ' ')
     dict = create_tf_dict(text)
+
     tf_dicts.append(dict)
     # Add to vocab
     if id == 0:
       vocab = set(dict.keys())
     else:
-      vocab.union(set(dict.keys()))
+      vocab = vocab.union(set(dict.keys()))
 
   # idf
   idf_dict = {}
@@ -162,22 +170,46 @@ def extract_terms(urls):
   tf_idf_dicts = []
   for tf_dict in tf_dicts:
     tf_idf_dict = {}
-    #for t in tf_dict.keys():
-      #tf_idf_dict[t] = tf_dict[t] * idf_dict[t]
-    #tf_idf_dicts.append(tf_idf_dict)
+    for t in tf_dict.keys():
+      tf_idf_dict[t] = tf_dict[t] * idf_dict[t]
+    tf_idf_dicts.append(tf_idf_dict)
   
+  # Get terms by weight
+  doc_term_weights = sorted(tf_idf_dicts[0].items(), key=lambda x:x[1], reverse=True)
+  print("Top terms: ")
+  top_terms = doc_term_weights[:50]
+  for i, term in enumerate(top_terms):
+    print("" + str(i+1) + ":", term)
 
-  #doc_term_weights = sorted(tf_idf_dicts[0].items(), key=lambda x:x[1])
-  #print(doc_term_weights[:5])
+  return [term[0] for term in top_terms]
 
+def create_knowledge_base(terms, external_urls):
+  # Open formatted lines files
+  texts = [open(filename, encoding="utf-8").readlines() for filename in ["output/formatted_lines/text_" + str(i) + ".txt" for i in range(len(external_urls))]]
+
+  kb = {}
+  for term in terms:
+    kb[term] = []
+
+  # Find lines that contain terms
+  for text in texts:
+    for term in terms:
+      kb[term]  = kb[term] + [line for line in text if line.lower().find(term) != -1]
+  
+  # Pickle knowledge base
+  pickle.dump(kb, open('output/kb/kb.p', 'wb')) 
+
+  # Output knowledge base in readable form
+  f = open('output/kb/kb.txt', 'w', encoding='utf-8')
+  f.write(str(kb))
 
   return None
-
 
 def main():
   # Crawl web
   external_urls = web_crawler('https://en.wikipedia.org/wiki/Berserk_%28manga%29', [])
   print("Web crawled!", len(external_urls), "urls found")
+  print_break()
 
   # Extract text
   for id, external_url in enumerate(external_urls):
@@ -188,7 +220,33 @@ def main():
     clean_text(id)
 
   # Extract terms
-  extract_terms(external_urls)
+  terms = extract_terms(external_urls)
+  print_break()
+  terms = ['griffith', 'guts', 'casca', 'dream', 'sword','men', 'femto', 'god', 'dead', 'battle']
+  print("Top 10 terms chosen manually: ")
+  for i, term in enumerate(terms):
+    print("" + str(i+1) + ":", term)
+
+  # Create knowledge base
+  create_knowledge_base(terms, external_urls)
+  print_break()
+
+  # Menu for seeing knowledge base
+  kb = pickle.load(open('output/kb/kb.p', 'rb'))  # read binary
+  print("Knowlege base includes the following terms:" )
+  print(list(kb.keys()))
+
+  while True:
+    choice = input("Enter a term or q to quit: ")
+    # Quit
+    if choice.lower() == 'q':
+      break
+    # Check choice
+    if choice in kb.keys():
+      print(random.choice(kb[choice]))
+    else:
+      print("\"" + choice + "\"", "is not in the knowledge base")
+  
 
 if __name__ == '__main__':
   main()
