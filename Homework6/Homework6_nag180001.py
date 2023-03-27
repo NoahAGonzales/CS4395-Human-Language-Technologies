@@ -7,11 +7,14 @@ import random
 import nltk
 from nltk import word_tokenize
 from nltk import sent_tokenize
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 STOPWORDS = stopwords.words('english')
 
 def print_break():
   print("---------------------------------------------------------")
+
+print_break()
 
 def web_crawler(url, history):
   page = requests.get(url)
@@ -75,9 +78,10 @@ def clean_text(id):
   r_l = []
   for line in unformatted:
     for r in to_remove_term_line:
-      if line.lower().find(r.lower()) != -1:
+      if line.lower().strip().find(r.lower().strip()) != -1:
         r_l.append(line)
         break
+
   for r in r_l:
     unformatted.remove(r)
 
@@ -88,7 +92,7 @@ def clean_text(id):
   
   # Apply filters to raw text
   for remove in to_remove_term:
-    unformatted = unformatted.replace(remove, ' ')
+    unformatted = unformatted.replace(remove.strip(), ' ')
 
   # Remove newlines
   unformatted = unformatted.replace('\n',' ')
@@ -222,7 +226,7 @@ def main():
   # Extract terms
   terms = extract_terms(external_urls)
   print_break()
-  terms = ['griffith', 'guts', 'casca', 'dream', 'sword','men', 'femto', 'god', 'dead', 'battle']
+  terms = ['griffith', 'guts', 'casca', 'dream', 'sword','men', 'femto', 'god', 'dead', 'battle', 'miura']
   print("Top 10 terms chosen manually: ")
   for i, term in enumerate(terms):
     print("" + str(i+1) + ":", term)
