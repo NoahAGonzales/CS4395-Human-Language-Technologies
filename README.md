@@ -60,3 +60,8 @@ This assignment was to create a corpus using a webcrawler.
 The webcrawler scapes text off of a starting site and related sites linked from that starting site.
 The text is then used to create a knowledge base, which in this case is a pickled dictionary containing terms as keys and an array of sentences containing each term as the value. [This](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/bf0a1971c0296f8f68b95bf14c40c47c171a0443/Homework6/Homework6-webcrawler_nag180001.pdf) document describes the process and assignment.
 The python file can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/bf0a1971c0296f8f68b95bf14c40c47c171a0443/Homework6/Homework6_nag180001.py)
+
+## Homework 7 - Text Classification 1
+This assignment was to classify text using three different methods: Naive-Bayes, Regression, and Neural Networks. 
+The performance of the three methods was analyzed.
+The text classification can be found [here]()
