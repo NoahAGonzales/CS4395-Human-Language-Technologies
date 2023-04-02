@@ -87,6 +87,11 @@ def clean_text(id):
 
   unformatted = "\n".join(unformatted)
 
+
+  #TODO: remove numbers by replacing text with number with a NUM token then replacing num tokens with nothing
+  #unformatted = re.sub(r"[\d]*[.]?[\d]*", '', unformatted)
+  
+
   # Remove empty lines and whitespace
   unformatted = '\n'.join([line.strip() for line in unformatted.split('\n') if line.strip()] )
   
