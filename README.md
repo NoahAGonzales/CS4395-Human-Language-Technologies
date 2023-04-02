@@ -64,4 +64,4 @@ The python file can be found [here](https://github.com/NoahAGonzales/CS4395-Huma
 ## Homework 7 - Text Classification 1
 This assignment was to classify text using three different methods: Naive-Bayes, Regression, and Neural Networks. 
 The performance of the three methods was analyzed.
-The text classification can be found [here]()
+The text classification can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/1d57aca76b518aab90e381ddcb94a47b48eafc5e/Homework7/Homework7_nag180001.pdf).
