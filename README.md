@@ -65,3 +65,6 @@ The python file can be found [here](https://github.com/NoahAGonzales/CS4395-Huma
 This assignment was to classify text using three different methods: Naive-Bayes, Regression, and Neural Networks. 
 The performance of the three methods was analyzed.
 The text classification can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/1d57aca76b518aab90e381ddcb94a47b48eafc5e/Homework7/Homework7_nag180001.pdf).
+
+## Homework 8 - ACL Paper Summary
+This assignment was to write a summary of a reseach paper concerning natural language processing. The summary document can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/87b0f845f25be33d938b36fd84b68a22ba36160e/Homework8/Homework8_nag180001.pdf)
