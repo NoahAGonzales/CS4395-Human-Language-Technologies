@@ -24,11 +24,13 @@ def preprocess_text(text):
 
   # Modify text
   text = text.replace("\n","")
-  punc = [".", "!", "?", ","] # Remove punctuation that messes up regex
+  text = text.replace ('"', " ")
+  punc = [".", "!", "?", ",", "(", ")", "-"] # Remove punctuation that messes up regex
   for p in punc:
     text = re.sub("[" + p + "]", " ", text)
   text = re.sub(r"o[h]{2,}", "oh", text)
   text = re.sub(r"a[h]{2,}", "oh", text)
+  text = re.sub(r"[\t]", " ", text)
 
   # Tokenize to remove stopwords and punctuation
   tokens = word_tokenize(text)
@@ -40,11 +42,18 @@ def preprocess_text(text):
 
 # Preprocess text
 text = []
-
 for line in df.Line:
   text.append(preprocess_text(line))
+
+# Write conversational text to output file
+output = open('data/conversations.txt', 'w', encoding='UTF-8')
+for i, line in enumerate (text):
+  if (i < len(text)-1):
+    output.write(line + "\t" + text[i+1] + "\n")
+output.close()
 
 text = '\n'.join(text)
 
 output = open('data/corpus.txt', 'w', encoding='UTF-8')
 output.write(text)
+output.close()
