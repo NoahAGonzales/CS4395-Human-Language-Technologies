@@ -1,0 +1,4 @@
+To run, navigate to the "Homework9" directory in this repo. 
+Then, in a terminal use python to run "build_model.py". No parameters are required. 
+The model should run from a saved checkpoint and dialog should start.
+Have fun!
