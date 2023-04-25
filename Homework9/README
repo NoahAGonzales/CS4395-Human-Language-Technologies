@@ -1,4 +1,5 @@
 To run, navigate to the "Homework9" directory in this repo. 
 Then, in a terminal use python to run "build_model.py". No parameters are required. 
 The model should run from a saved checkpoint and dialog should start.
-Have fun!
+
+Details concerning implementation can be found in "Homework9-nag180001.pdf" also in the "Homework9" folder.
