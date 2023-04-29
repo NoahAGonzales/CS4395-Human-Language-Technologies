@@ -71,3 +71,6 @@ This assignment was to write a summary of a reseach paper concerning natural lan
 
 ## Homework 9 - Chatbot
 [This](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/tree/main/Homework9) assignment was to create a chatbot. I did not like the concept of creating a chatbot that is a simple interface for querying information. Therefore, my goal for the chatbot was to create a personality that is fun to interact with instead of informative. I think that I acomplished this goal: I created a bot that talks like characters from the TV show "South Park". However, there were some compromises. The chatbot is built on a RNN made with PyTorch. User profiles and incorporating such into the dialog was not able to be accomplished. I still think that this project was fun and successful. 
+
+## Summary
+This class has helped me develop many skills. Included in those skills are general development with my knowledge of Python, knowledge of many NLP concepts, knowledge of the NLP field and its future, and knowledge of current trends in NLP. The rise in prevalence of "AI" and consequently, NLP, will necessitate keeping up with NLP developments and interests, and NLP tools are also extremely useful for accomplishing personal tasks. I think that this class gave me great insight into current technology and the projects were enjoyable!
