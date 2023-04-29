@@ -68,3 +68,6 @@ The text classification can be found [here](https://github.com/NoahAGonzales/CS4
 
 ## Homework 8 - ACL Paper Summary
 This assignment was to write a summary of a reseach paper concerning natural language processing. The summary document can be found [here](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/blob/87b0f845f25be33d938b36fd84b68a22ba36160e/Homework8/Homework8_nag180001.pdf)
+
+## Homework 9 - Chatbot
+[This](https://github.com/NoahAGonzales/CS4395-Human-Language-Technologies/tree/main/Homework9) assignment was to create a chatbot. I did not like the concept of creating a chatbot that is a simple interface for querying information. Therefore, my goal for the chatbot was to create a personality that is fun to interact with instead of informative. I think that I acomplished this goal: I created a bot that talks like characters from the TV show "South Park". However, there were some compromises. The chatbot is built on a RNN made with PyTorch. User profiles and incorporating such into the dialog was not able to be accomplished. I still think that this project was fun and successful. 
